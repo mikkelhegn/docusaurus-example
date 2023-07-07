@@ -1,7 +1,7 @@
 spin_manifest_version = "1"
 authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
 description = "A Spin template for building Docusaurus sites"
-name = "Docusaurus Template"
+name = "docusaurus_template"
 trigger = { type = "http", base = "/" }
 version = "0.1.0"
 
@@ -12,6 +12,6 @@ files = [ { source = "my-website/build", destination = "/" } ]
 [component.trigger]
 route = "/..."
 [component.build]
-watch = ["src/**"]
+watch = ["src/**", "static/**", "docs/**", "blog/**"]
 command = "npm run build"
 workdir = "my-website"
